@@ -1,0 +1,427 @@
+/* Question */
+/* dev tool 使った時に広がらない方法 */
+/* display-block vs div */
+/* h1 vs p vs div */
+
+
+/* ここから下に記載していく */
+* {
+    box-sizing: border-box;
+  } 
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: papayawhip;
+}
+
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    margin-bottom: 28px;
+    color: rgba(205, 197, 50, 0.65);
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+} 
+
+
+h3 {
+    margin-bottom: 28px;
+    color: black;
+    font-weight: 600px;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Header starts here */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.header_logo {
+    padding: 20px;
+    background-color: papayawhip;
+}
+
+
+.header_list {
+    display: flex;
+    /* justify-content: end; */
+    align-items: center;
+    background-color: papayawhip;
+    font-size: 21px;
+}
+
+ol, ul {
+    display: flex;
+    margin: 0px 50px;
+    list-style: none;
+}
+
+.header_list li {
+    margin: 50px 50px;
+}
+
+
+
+/* header ends here */
+
+/* main visual starts here */
+
+h1.main_visual {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main_visual {
+    background-color: slateblue;
+    background-image: url(../img/mainbg.png);
+    /* 現代で100%表示はほとんどない */
+    width: 1200px;
+    height: 500px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px auto; 
+    /* 🌷ここは絶対に暗記すること。幅が決まっているものを中央に持ってくるのはこれだけ */
+    font-size: 30px;
+    color: white;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 60px;
+    margin-bottom: 30px;
+    /* ここから下も正解と言えば正解 */
+    /* display: flex; */
+    /* align-items: center; */
+    /* flex-direction: column; */
+}
+
+.main_visual p {
+    margin-top: 30px;
+    font-weight: 300;
+    font-size: 32px;
+}
+
+/* main visual ends here */
+
+
+.z p {
+    font-size: medium;
+    padding-top: 30px;
+}
+
+/* about starts here */
+div.about {
+    text-align: center; 
+    margin-bottom: 80px;
+    width: 1200px;
+}
+
+p.about {
+    margin-bottom: 40px;
+}
+
+
+.about_img {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 80px;
+    width: 1200px;
+    /* height: 385px; */
+    box-sizing: border-box;
+    margin: 0px auto;
+    object-fit: cover;
+}
+/* 
+div.bb {
+    display: flex;
+    align-items: center;
+}
+    /* ⭐️これが大前提 */
+
+/* course starts here */
+
+div#news {
+    margin-top: 30px;
+}
+
+#course {
+    margin-bottom: 30PX;
+    background-color: pin;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    flex-wrap: center;
+    justify-content: center;
+    align-items: stretch;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+.course_upper { 
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.course {
+    width: 1200px;
+    display: flex;
+    /* まず指定すべきはwidth, height */
+    /* display flexだけあれば横並びになる */
+    /* justify-content: center; */
+    /* align-items: center; */
+    text-align: center;
+    /* width: 100%; */
+    /* height: 480px; */
+    font-size: 16px;
+}
+
+.course_text {
+    /* width: 100%; */
+    /* width: 480px; */
+    width: 600px;
+    background-color: pink;
+    /* background-position: center center; */
+    /* height: 480px; */
+    padding: 120px 50px;
+}
+/* paddingを入れると体積増えてしまう⇨box-sizingが必要 */
+/* ⭐️50％の要素に入るようにする。これやるとCourseのところのH2の要素も半分になってしまう。 */
+
+.course img {
+    width: 600px;
+    /* height: 480px; */
+    /* width: 480px; */
+    /* width: 100%; */
+    /* ⭐️50%の中の100％のイメージ */
+}
+
+/* news starts here */
+
+div.news {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 1200px;
+    margin: 60px auto;
+}
+.news_block {
+    margin-left: 30px;
+}
+
+.news_text {
+    font-size: 12px;
+}
+
+h4.news {
+    padding: 30px 0 24px 0;
+}
+
+p.news {
+    /* padding-top: 24px; */
+    line-height: 20px;
+}
+/* news ends here */
+
+
+/* more starts here */
+p.more {
+    background-color: orange;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 800;
+    margin: 50px auto;
+    width: 300px;
+    display: block;
+    text-align: center;
+    height: 60px;
+    padding-top: 23px;
+}
+
+.more:hover {
+    color: #fff;
+    opacity: 0.8;
+  }
+/* more ends here */
+
+
+/* Access starts here */
+.access {
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+#access {
+    margin: 60px auto 30px auto;
+    text-align: center;
+    width: 1200px;
+    background-color: aliceblue;
+}
+
+.access_table {
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+/* access ends here */
+
+/* contact starts here */
+
+.contact_upper {
+    text-align: center;
+    padding-top: 60px;
+}
+
+/* contatct ends here */
+
+/* Table starts here */
+
+.table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    /* text-align: center; */
+    /* display: flex; */
+    /* justify-content: center; */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 199px;
+}
+
+
+#table01 tr {
+    border-bottom: 1px solid #b5b1b1;
+  }
+  
+  #table01 th,
+  #table01 td {
+    padding: 24px 0;
+    border: none;
+  }
+  
+  #table01 th {
+    width: 30%;
+  }
+  
+  /* sp */
+  @media only screen and (max-width: 480px) {
+    #table01 th,
+    #table01 td {
+      width: 100%;
+      display: block;
+    }
+  
+    #table01 th {
+      width: 100%;
+    }
+  
+    #table01 td {
+      padding-top: 0;
+    }
+  }
+
+
+/* Contact form starts */
+/* 🔗 https://zenn.dev/yurukei20/articles/9741118bfb5ee0*/
+
+.c-form {
+	max-width: 600px;
+	margin: 0 auto;
+}
+.c-form__item {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin-bottom: 20px;
+}
+.c-form__label,
+.c-form__input {
+	padding: 10px;
+}
+.c-form__label {
+	width: 90%;
+}
+.c-form__input {
+	width: 90%;
+	font-size: 16px;
+	border: solid 1px #333;
+	border-radius: 4px;
+}
+.c-form__input:focus-visible {
+	outline: orangered auto 1px;
+}
+.c-form__required {
+	color: #fff;
+	background-color: orange;
+	border-radius: 4px;
+	padding: 5px 5px;
+	margin: 0 0 0 18px;
+}
+textarea.c-form__input {
+	height: 160px;
+}
+.c-form__submit {
+	text-align: center;
+}
+.c-form__submit button {
+	font-size: 18px;
+	font-weight: bold;
+	color: #fff;
+	background-color: orange;
+	border: solid 1px orange;
+	border-radius: 4px;
+	padding: 5px 32px;
+	transition: 0.4s;
+	cursor: pointer;
+}
+.c-form__submit button:hover {
+	color: orangered;
+	background-color: transparent;
+}
+
+@media (min-width: 640px) {
+	.c-form__item {
+		flex-wrap: nowrap;
+	}
+	.c-form__label {
+		width: 40%;
+	}
+	.c-form__input {
+		width: 55%;
+	}
+}
+
+/* 問い合わせ */
+
+form {
+    align-items: center;
+    background-position: center;
+    margin-left: 410px;
+    padding: 30px;
+    border-color: black;
+}
+
+/* Google form starts here*/
+/* Google form ends here*/
+
+/* Footer starts here */
+footer.copyright {
+    height: 50px;
+    background-color: slategray;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+/* footer ends here */
